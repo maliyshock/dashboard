@@ -1,0 +1,19 @@
+
+@mixin roboto {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+@mixin roboto-light {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+@mixin roboto-med {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+@mixin fontello {
+    font-family: 'fontello';
+}

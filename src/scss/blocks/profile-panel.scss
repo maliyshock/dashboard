@@ -1,0 +1,21 @@
+.profile-panel {
+  @include dflex;
+  align-items: center;
+
+  text-decoration: none;
+
+  padding-left: 14px;
+  padding-right: 14px;
+
+  &__image {
+    width: 28px;
+    height: 28px;
+
+    margin-right: 14px;
+
+    border-radius: 100%;
+
+    background-size: cover;
+    background-position: center;
+  }
+}

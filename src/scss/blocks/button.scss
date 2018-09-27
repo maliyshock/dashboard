@@ -1,0 +1,36 @@
+.button {
+  $c: &;
+  @include resetButton;
+  display: inline-block;
+
+  width: 100%;
+  //max-width: 270px;
+
+  cursor: pointer;
+
+  transition: background-color $transition-time;
+
+  padding: 16px 15px;
+
+  text-align: center;
+
+  &--color-blue {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+    }
+  }
+
+  &--width-full {
+    width: 100%;
+    max-width: 100% ;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+  }
+}

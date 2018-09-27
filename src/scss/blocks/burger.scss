@@ -1,0 +1,23 @@
+.burger, .navigation__close {
+  @include resetButton;
+  @include for-phone-up {
+    @include dflex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    width: 50px;
+    height: 50px;
+
+    fill: #fff;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}

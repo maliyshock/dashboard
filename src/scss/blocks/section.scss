@@ -1,0 +1,23 @@
+.section {
+  $c: &;
+  &__inner {
+    @include wrapper;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  //&__button-area {
+  //  @include dflex;
+  //  justify-content: center;
+  //  align-items: center;
+  //
+  //  padding-top: 50px;
+  //  padding-bottom: 50px;
+  //
+  //  @include for-tablet-portrait-up {
+  //    flex-wrap: nowrap;
+  //  }
+  //}
+}

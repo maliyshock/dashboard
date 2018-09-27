@@ -1,0 +1,21 @@
+body, html {
+  //height: 100%;
+
+  font-size: 14px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  line-height: 150%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: $light-gray;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ovh {
+  overflow: hidden;
+}

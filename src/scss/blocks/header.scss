@@ -1,0 +1,40 @@
+.header {
+  &__inner {
+    @include dflex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: #fff;
+  }
+
+  &__link {
+    @include dflex;
+    align-items: center;
+    align-self: stretch;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    text-decoration: none;
+    color: $black;
+
+    background-color: transparent;
+
+    transition: 0.3s background-color;
+
+    &:hover {
+      background-color: $lighter-gray;
+
+      & svg {
+        //fill: #fff;
+      }
+    }
+  }
+
+  &__panel {
+    @include dflex;
+    align-items: center;
+
+    margin-right: -14px;
+  }
+}

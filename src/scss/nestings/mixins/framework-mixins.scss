@@ -1,0 +1,337 @@
+
+@mixin reset-link() {
+    line-height: normal;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid;
+}
+
+@mixin reset-link-no-bd() {
+  line-height: normal;
+
+  text-decoration: none;
+}
+
+@mixin pseudo-elem() {
+    position: absolute;
+
+    display: block;
+
+    content: '';
+}
+
+
+@mixin tri-r($color, $width, $height) {
+    border-top: $height / 2 + px solid transparent;
+    border-bottom: $height / 2 + px solid transparent;
+    border-left: $width + 0 + px solid $color;
+}
+
+@mixin tri-l($color, $width, $height) {
+    border-top: $height + px solid transparent;
+    border-right: $width + px solid $color;
+    border-bottom: $height / 2 + px solid transparent;
+}
+
+@mixin tri-t($color, $width, $height) {
+    border-right: $width + px solid transparent;
+    border-bottom: $height + px solid $color;
+    border-left: $width + px solid transparent;
+}
+
+@mixin tri-b($color, $width, $height) {
+    border-top: $height + px solid $color;
+    border-right: $width + px solid transparent;
+    border-left: $width + px solid transparent;
+}
+
+@mixin reset-ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+@mixin resetInput {
+    border: none;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px #eeeeee;
+    }
+
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+@mixin resetButton {
+    padding: 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 10px #eeeeee;
+    }
+}
+ @mixin makeCircle ($width, $height, $bg) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: $width;
+    height: $height;
+
+    border-radius: 50%;
+
+    background-color: $bg;
+}
+
+ @mixin colorizeButton ($background-color, $text-color) {
+   background-color: $background-color;
+   color: $text-color;
+
+   &__icon {
+     fill: $text-color;
+   }
+
+   &:hover {
+     background-color: lighten($background-color, 3%) ;
+   }
+
+   &.button--hollow {
+      border-color: $background-color;
+
+      background-color: transparent;
+
+     & .button__text {
+       color: $background-color;
+     }
+
+     & .button__icon {
+       fill: $background-color;
+     }
+
+       &:after {
+         background-color: $background-color;
+       }
+
+       &:hover {
+        background-color: $background-color;
+          & .button__text {
+            color: $text-color;
+          }
+
+         & .button__icon {
+           fill: $text-color;
+         }
+      }
+    }
+
+   &[disabled], &.disabled {
+     &:hover {
+       background-color: $background-color;
+       color: $text-color;
+     }
+   }
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $color;
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+
+@mixin for-phone-only {
+    @media (max-width: $phone-to) {
+        @content;
+    }
+}
+
+@mixin for-phone-up {
+    @media (min-width: $phone-from) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: $tablet-portrait) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: $tablet-landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: $big-desktop ) {
+        @content;
+    }
+}
+
+@mixin bg-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin margin-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin dflex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin dflex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin resetGridItem {
+  display: block;
+  flex-basis: auto;
+
+  width: auto;
+  max-width: 100%;
+}
+
+@mixin oneCoulumn {
+  & > * {
+    display: block;
+    flex-basis: 100%;
+
+    max-width: 100%;
+  }
+
+  @supports (grid-template-columns: repeat(1, 1fr)) {
+    grid-template-columns: repeat(1, 1fr);
+
+    & > * {
+      @include resetGridItem;
+    }
+  }
+}
+
+@mixin twoCoulumns {
+  & > * {
+    @include dflex;
+    flex-basis: 50%;
+
+    max-width: 50%;
+  }
+
+  @supports (grid-template-columns: repeat(2, 1fr)) {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > * {
+      @include resetGridItem;
+    }
+  }
+}
+
+@mixin threeCoulumns {
+  & > * {
+    @include dflex;
+    flex-basis: 33%;
+
+    max-width: calc(33% - 12px);
+  }
+
+  @supports (grid-template-columns: repeat(3, 1fr)) {
+    grid-template-columns: repeat(3, 1fr);
+
+    & > * {
+      @include resetGridItem;
+    }
+  }
+}
+
+
+@mixin sixCoulumns {
+  & > * {
+    @include dflex;
+    flex-basis: 16.6%;
+
+    max-width: calc(16.6% - 12px);
+  }
+
+  @supports (grid-template-columns: repeat(6, 1fr)) {
+    grid-template-columns: repeat(6, 1fr);
+
+    & > * {
+      @include resetGridItem;
+    }
+  }
+}
+
+
+@mixin wrapper {
+  width: 100%;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include for-tablet-landscape-up {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@mixin textShadow {
+  text-shadow: 1px 1px rgba(0,0,0, 0.15);
+}
+
+@mixin boxShadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14);
+}
+
+@mixin module {
+  background: #FFFFFF;
+
+  @include boxShadow;
+
+  border-radius: 2px;
+}

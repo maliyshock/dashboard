@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'nunito';
+  src: url('#{$path-to-fonts}/nunito/nunito-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url('#{$path-to-fonts}/nunito/nunito-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: black;
+  font-size: 14px;
+  font-family: 'nunito', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+
+  line-height: 130%;
+}
+
+p {
+  line-height: 150%;
+  max-width: 100%;
+}
+
+.text--white {
+  color: white;
+}
+
+.inline-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.p {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.h1 {
+  margin-bottom: .3em;
+
+  font-weight: 400;
+
+  @include for-phone-up {
+    font-size: between(30px, 50px, $phone-from, $tablet-landscape);
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 48px;
+  }
+}
+
+.h2 {
+  margin-bottom: .3em;
+
+  font-weight: 400;
+
+  @include for-phone-up {
+    font-size: between(24px, 36px, $phone-from, $tablet-landscape);
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 36px;
+  }
+
+  & + .text--big {
+    margin-top: 20px;
+  }
+}
+
+.h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+
+  @include for-phone-up {
+    font-size: between(20px, 30px, $phone-from, $tablet-landscape);
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 30px;
+  }
+}
+
+.h5 {
+  max-width: 100%;
+
+  font-weight: 400;
+  line-height: 150%;
+
+  margin-bottom: .7em;
+
+  @include for-phone-up {
+    font-size: 18px;
+  }
+
+  @include for-desktop-up {
+    font-size: 24px;
+  }
+}
+
+
+.h6 {
+  max-width: 100%;
+
+  font-weight: 400;
+  line-height: 150%;
+
+  margin-bottom: .7em;
+
+  @include for-phone-up {
+    font-size: 16px;
+  }
+
+  @include for-desktop-up {
+    font-size: 20px;
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text--gray {
+  color: $gray;
+}

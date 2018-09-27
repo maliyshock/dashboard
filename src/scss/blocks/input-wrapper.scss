@@ -1,0 +1,14 @@
+.input-wrapper {
+
+  &__input {
+    @include resetInput;
+
+    width: 100%;
+
+    padding: 16px 15px;
+
+    border-radius: 2px;
+
+    font-size: 14px;
+  }
+}

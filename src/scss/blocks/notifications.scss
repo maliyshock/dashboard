@@ -1,0 +1,48 @@
+.notifications {
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  &__inner {
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+
+    & > svg {
+      fill: $gray;
+
+      transition: fill 0.3s;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 11px;
+    height: 11px;
+
+    background-color: $sub-color;
+
+    border-radius: 100%;
+
+    transform: translateX(10%) translateY(17%);
+
+    color: #fff;
+    font-size: 8px;
+    font-weight: bold;
+  }
+}

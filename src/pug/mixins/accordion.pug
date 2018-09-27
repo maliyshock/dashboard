@@ -1,0 +1,7 @@
+mixin accordion (title)
+    .accordion.js-accordion
+        a.accordion__head.js-accordion-head(href='#')
+            span.accordion__title #{title}
+            time.accordion__date(datetime="2018-07-29") July 29, 2018
+        .accordion__body.js-accordion-body
+            block

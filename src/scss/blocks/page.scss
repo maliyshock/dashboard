@@ -1,0 +1,28 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+
+  width: 100%;
+  min-height: 100%;
+
+  & > * {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__title {
+    padding-top: 1.8em;
+    padding-bottom: 1.3em;
+  }
+}

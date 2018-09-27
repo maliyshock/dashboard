@@ -1,0 +1,7 @@
+.link {
+  $c: &;
+
+  &--color-white {
+    color: #fff;
+  }
+}

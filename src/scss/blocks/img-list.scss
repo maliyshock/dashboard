@@ -1,0 +1,63 @@
+.img-list {
+  display: flex;
+  @include reset-ul;
+
+  background-color: $lightest-gray;
+
+  border-bottom: 1px solid $lighter-gray;
+  border-top: 1px solid $lighter-gray;
+
+
+  &__item {
+    @include dflex;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+
+    max-width: 33%;
+    width: 100%;
+
+    border-right: 1px solid $lighter-gray;
+
+    padding-left: 14px;
+    padding-right: 14px;
+
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+
+    & svg {
+      fill: $main-color;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    color: $black;
+
+    &--color-blue {
+      color: $main-color;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    padding-top: 28px;
+    padding-bottom: 20px;
+
+    text-decoration: none;
+    color: $main-color;
+  }
+}

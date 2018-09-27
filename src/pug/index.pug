@@ -1,0 +1,110 @@
+include mixins/all
+
+doctype html
+html.page(lang='nl')
+    head
+        include parts/head
+    body.page__wrapper
+        include parts/sidebar
+
+        main.page__main
+            include parts/header
+            include parts/notice
+            .page__content.wrapper
+                h1.page__title.title Implant Restoration Case Review
+                .row
+                    .module
+                        .module__inner
+                            +accordion('Mxscan0729.stl')
+                                img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
+
+                            +accordion('Mnscan0729.stl')
+                                img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
+
+                            +accordion('Implantscan0729.stl')
+                                img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
+
+                            +accordion('bitescan0729.stl')
+                                img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
+
+                            +accordion('11 - Temp Cad Design')
+                                img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
+
+
+                    .module.module--desktop-fix-normal
+                        .module__inner
+                            .module__header.module__text
+                                span Total Number of Implants:
+                                |
+                                span.text--gray 2
+
+                            ul.img-list
+                                li.img-list__item
+                                    a.img-list__link(href='#')
+                                        .img-list__img
+                                            include ../images/delivery-truck.svg
+                                        .img-list__text
+                                            span.text--gray Delivery
+                                            |
+                                            span 17 km
+
+                                li.img-list__item
+                                    a.img-list__link(href='#')
+                                        .img-list__img
+                                            include ../images/delivery-truck.svg
+                                        .img-list__text
+                                            span.text--gray Clinical Images
+
+                                li.img-list__item
+                                    a.img-list__link(href='#')
+                                        .img-list__img
+                                            include ../images/delivery-truck.svg
+                                        .img-list__text.img-list__text--color-blue
+                                            span Download Case
+
+                            .module__section
+                                .module__row
+                                    span.module__label.module__label--min-width-norm Restoring Dr:
+                                    |
+                                    span.module__value Unknown*
+
+                                .module__row
+                                    span.module__label.module__label--min-width-norm Implant Surgeon:
+                                    |
+                                    span.module__value Dr. Marco Polo
+
+                                .module__row
+                                    span.module__label.module__label--min-width-norm Case Ref:
+                                    |
+                                    span.module__value ‘Smith’ Dob 1983
+
+                            .module__section
+                                .module__row
+                                    .module__text Implant Sites:
+
+                                    table.table
+                                        tbody.table__tbody
+                                            tr.table__tr
+                                                td.table__td
+                                                    span.text--gray Site 11
+                                                td.table__td
+                                                    span.text--gray Straumann
+                                                td.table__td
+                                                    span.text--gray RC
+                                                td.table__td
+                                                    a.status(href='')
+                                                        include ../images/status.svg
+                                            tr.table__tr
+                                                td.table__td
+                                                    span.text--gray Site 11
+                                                td.table__td
+                                                    span.text--gray Straumann
+                                                td.table__td
+                                                    span.text--gray RC
+                                                td.table__td
+                                                    a.status(href='')
+                                                        include ../images/status.svg
+                        .module__notice *will be made available once the quote is accepted
+                        +button('button--color-blue') Provide quote
+
+include parts/scripts

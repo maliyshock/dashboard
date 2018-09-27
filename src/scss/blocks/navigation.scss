@@ -1,0 +1,97 @@
+.navigation {
+  $c: &;
+
+  transition: transform $transition-time;
+
+  @include for-phone-up {
+    //position: fixed;
+    //left: 100%;
+    //top: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    overflow: auto;
+
+    //background-color: $blue;
+
+    z-index: $navigation;
+
+    &.open {
+      transform: translateX(-100%);
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    //position: static;
+
+    height: auto;
+    width: auto;
+
+    overflow: inherit;
+
+    background-color: transparent;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+
+  &__list {
+    @include dflex;
+
+    @include for-phone-up {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+
+    font-weight: 600;
+    text-shadow: 1px 1px rgba(0,0,0, 0.15);
+    text-decoration: none;
+    color: transparentize(#fff, 0.4);
+    fill: transparentize(#fff, 0.4);
+
+    transition: 0.3s color, 0.3s background-color;
+
+    &:hover {
+      color: #fff;
+      background-color: darken($sidebar, 10%);
+
+      #{$c}__icon {
+        fill: $main-color;
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &:hover {
+        //color: lighten($light-blue, 20%);
+        //fill: lighten($light-blue, 20%);
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 10px;
+
+    transition: 0.3s fill;
+  }
+}
