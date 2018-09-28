@@ -57,13 +57,18 @@
     color: $black;
   }
 
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
   &__date {
     max-width: 40%;
     text-align: right;
 
     color: $gray;
 
-    @include for-big-desktop-up {
+    @include for-tablet-portrait-up {
       text-align: left;
     }
   }

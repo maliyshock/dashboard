@@ -77,7 +77,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: darken($lightest-gray, 10%);
+      background-color: darken($lightest-gray, 5%);
     }
   }
 }
