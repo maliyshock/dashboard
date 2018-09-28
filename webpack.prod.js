@@ -25,13 +25,13 @@ const common = merge([
             filename: '[name].js'
         },
 
-        resolve: {
-            modules: [path.resolve('src'), "node_modules"],
-            alias: {
-                'jquery-ui': 'jquery-ui/ui/widgets',
-                'jquery-ui-css': 'jquery-ui/../../themes/base'
-            }
-        },
+        // resolve: {
+        //     modules: [path.resolve('src'), "node_modules"],
+        //     alias: {
+        //         'jquery-ui': 'jquery-ui/ui/widgets',
+        //         'jquery-ui-css': 'jquery-ui/../../themes/base'
+        //     }
+        // },
 
         plugins: [
             new HtmlWebpackPlugin({
