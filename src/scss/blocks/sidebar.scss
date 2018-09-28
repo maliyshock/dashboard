@@ -37,13 +37,10 @@
   }
 
   @include for-tablet-portrait-up {
-
     height: auto;
     width: auto;
 
     overflow: inherit;
-
-    background-color: transparent;
   }
 
   @include for-tablet-portrait-up {

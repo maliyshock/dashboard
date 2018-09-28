@@ -31,3 +31,11 @@ img {
     display: block;
   }
 }
+
+.show-on-tablet {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    display: block;
+  }
+}

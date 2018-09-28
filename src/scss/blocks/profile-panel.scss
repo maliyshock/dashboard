@@ -11,12 +11,14 @@
     width: 28px;
     height: 28px;
 
-    margin-right: 14px;
-
     border-radius: 100%;
 
     background-size: cover;
     background-position: center;
+
+    @include for-tablet-portrait-up {
+      margin-right: 14px;
+    }
   }
 
   &__text {

@@ -15,26 +15,22 @@
     justify-content: space-between;
 
     @include for-tablet-portrait-up {
+      //justify-content: inherit;
 
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 
   &__text {
-    @include for-desktop-up {
-      padding-left: 20px;
-      padding-right: 20px;
-
+    @include for-tablet-portrait-up {
       &:first-child {
-        padding-left: 0;
-      }
-
-      &:last-child {
-        padding-right: 0;
+        padding-right: 20px;
       }
     }
   }
 
-  &__time {
+  &__time-wrapper {
     @include dflex;
     width: 100%;
 
@@ -43,9 +39,16 @@
 
     justify-content: space-between;
 
-    @include for-desktop-up {
+    @include for-tablet-portrait-up {
+      width: auto;
+
       padding-left: 0;
-      padding-right: 0;
+    }
+  }
+
+  &__time {
+    @include for-tablet-portrait-up {
+      padding-left: 10px;
     }
   }
 }

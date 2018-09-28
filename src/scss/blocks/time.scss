@@ -9,12 +9,25 @@
 
     font-size: 0;
 
+    @include for-tablet-portrait-up {
+      width: auto;
+      height: auto;
+
+      padding-left: 3px;
+      padding-right: 3px;
+
+      font-size: 14px;
+    }
+
     &:before {
       content:':';
       display: inline-block;
       font-size: 14px;
-    }
 
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
 
     &:last-child {
       &:before {
