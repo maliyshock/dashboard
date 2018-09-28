@@ -6,13 +6,15 @@
   width: 100%;
   //max-width: 270px;
 
+  padding: 16px 15px;
+
+  border-radius: 5px;
+
+  text-align: center;
+
   cursor: pointer;
 
   transition: background-color $transition-time;
-
-  padding: 16px 15px;
-
-  text-align: center;
 
   &--color-blue {
     background-color: $main-color;

@@ -1,0 +1,25 @@
+.time {
+  &__measure {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5px;
+    height: 10px;
+
+    font-size: 0;
+
+    &:before {
+      content:':';
+      display: inline-block;
+      font-size: 14px;
+    }
+
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

@@ -10,10 +10,10 @@ html.page(lang='nl')
         main.page__main
             include parts/header
             include parts/notice
-            .page__content.wrapper
-                h1.page__title.title Implant Restoration Case Review
+            .page__content
+                h1.page__title.title.show-on-desktop Implant Restoration Case Review
                 .row
-                    .module
+                    .module.large-6.small-12
                         .module__inner
                             +accordion('Mxscan0729.stl')
                                 img(class='accordion__img', src='../images/plhdr_teeth.jpg', alt='picture of teeth')
@@ -51,14 +51,14 @@ html.page(lang='nl')
                                 li.img-list__item
                                     a.img-list__link(href='#')
                                         .img-list__img
-                                            include ../images/delivery-truck.svg
+                                            include ../images/photo.svg
                                         .img-list__text
                                             span.text--gray Clinical Images
 
                                 li.img-list__item
                                     a.img-list__link(href='#')
                                         .img-list__img
-                                            include ../images/delivery-truck.svg
+                                            include ../images/download.svg
                                         .img-list__text.img-list__text--color-blue
                                             span Download Case
 
@@ -105,6 +105,7 @@ html.page(lang='nl')
                                                     a.status(href='')
                                                         include ../images/status.svg
                         .module__notice *will be made available once the quote is accepted
-                        +button('button--color-blue') Provide quote
+                        .module__btn.module__btn--sticky-mobile
+                            +button('button--color-blue') Provide quote
 
 include parts/scripts

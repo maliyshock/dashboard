@@ -1,6 +1,5 @@
-.burger, .navigation__close {
+.burger, .close {
   @include resetButton;
-  @include for-phone-up {
     @include dflex;
     justify-content: center;
     align-items: center;
@@ -12,12 +11,16 @@
 
     fill: #fff;
 
-    & > * {
-      height: 100%;
+    & > .svg-icon {
+      height: 15px;
+      width: 15px;
     }
-  }
+}
 
-  @include for-tablet-landscape-up {
-    display: none;
+.close {
+  &--white {
+    .svg-icon {
+      fill: white;
+    }
   }
 }

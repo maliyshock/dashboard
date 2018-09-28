@@ -3,42 +3,6 @@
 
   transition: transform $transition-time;
 
-  @include for-phone-up {
-    //position: fixed;
-    //left: 100%;
-    //top: 0;
-
-    height: 100vh;
-    width: 100%;
-
-    overflow: auto;
-
-    //background-color: $blue;
-
-    z-index: $navigation;
-
-    &.open {
-      transform: translateX(-100%);
-    }
-  }
-
-  @include for-tablet-landscape-up {
-    //position: static;
-
-    height: auto;
-    width: auto;
-
-    overflow: inherit;
-
-    background-color: transparent;
-  }
-
-  &__close {
-    position: absolute;
-    top: 20px;
-    right: 15px;
-  }
-
   &__list {
     @include dflex;
 

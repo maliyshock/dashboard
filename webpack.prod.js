@@ -38,14 +38,14 @@ const common = merge([
                 filename: 'index.html',
                 template: PATHS.source + '/pug/index.pug'
             }),
-            new HtmlWebpackPlugin({
-                filename: 'configure.html',
-                template: PATHS.source + '/pug/configure.pug'
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'geek.html',
-                template: PATHS.source + '/pug/geek.pug'
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: 'configure.html',
+            //     template: PATHS.source + '/pug/configure.pug'
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: 'geek.html',
+            //     template: PATHS.source + '/pug/geek.pug'
+            // }),
             // new webpack.ProvidePlugin({
             //     $: 'jquery',
             //     jQuery: 'jquery'

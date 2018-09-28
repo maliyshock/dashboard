@@ -19,7 +19,7 @@
     text-decoration: none;
     font-size: 14px;
 
-    padding: 20px 20px 20px 14px;
+    padding: 16px 20px 16px 14px;
 
     border-bottom: 1px solid $lightest-gray;
 
@@ -39,6 +39,10 @@
 
       transition: transform $transition-time;
     }
+
+    @include for-desktop-up {
+      padding: 20px 20px 20px 14px;
+    }
   }
 
   &__title, &__date {
@@ -55,8 +59,13 @@
 
   &__date {
     max-width: 40%;
+    text-align: right;
 
     color: $gray;
+
+    @include for-big-desktop-up {
+      text-align: left;
+    }
   }
 
   &__body {

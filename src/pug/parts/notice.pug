@@ -1,11 +1,18 @@
 .page__notice.notice
-    .notice__inner.wrapper
-        .notice__text
-            span Time remaining to review:
-            |
-            span.text--white 01 hr 31 min 12 sec
+    .notice__inner
+        .notice__text.notice__time
+                span Time remaining to review:
+                |
+                time(datetime="01:31:12").time.text--white
+                    span
+                    | 01
+                    span.time__measure hr
+                    | 31
+                    span.time__measure min
+                    | 12
+                    span.time__measure sec
 
-        .notice__text
+        .notice__text.show-on-desktop
             | See an issue with this case?
             |
             a.link(href='#') Report it

@@ -1,15 +1,35 @@
 import $ from 'jquery';
 
 export let burger = {
-    init: function () {
-        let $button = $('.js-menu-trigger');
-        let $navigation = $('.js-navigation');
-        let $body = $('body');
 
-        $button.on('click', function (){
-            $button.toggleClass('bt-menu-open');
-            $navigation.toggleClass('open');
-            $body.toggleClass('ovh');
+    cacheDom() {
+       this.$button = $('.js-menu-trigger');
+       this.$navigation = $('.js-navigation');
+       this.$close = $('.js-close');
+       this.$body = $('body');
+    },
+
+    bindEvents() {
+        this.$button.on('click',() => {
+            this.openMenu();
         });
+        this.$close.on('click',() => {
+            this.closeMenu();
+        });
+    },
+
+    openMenu(){
+        this.$navigation.addClass('open');
+        this.$body.addClass('ovh');
+    },
+
+    closeMenu(){
+        this.$navigation.removeClass('open');
+        this.$body.removeClass('ovh');
+    },
+
+    init() {
+        this.cacheDom();
+        this.bindEvents();
     }
 }

@@ -18,4 +18,12 @@
     background-size: cover;
     background-position: center;
   }
+
+  &__text {
+    display: none;
+
+    @include for-tablet-portrait-up {
+      display: inline-block;
+    }
+  }
 }
